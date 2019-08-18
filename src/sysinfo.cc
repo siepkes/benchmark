@@ -433,6 +433,8 @@ std::string GetSystemName() {
 #define HOST_NAME_MAX 64
 #elif defined(BENCHMARK_OS_QNX)
 #define HOST_NAME_MAX 154
+#elif defined(BENCHMARK_OS_SOLARIS)
+#define HOST_NAME_MAX 255
 #endif
   char hostname[HOST_NAME_MAX];
   int retVal = gethostname(hostname, HOST_NAME_MAX);
